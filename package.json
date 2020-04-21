@@ -1,0 +1,39 @@
+{
+  "name": "dropzone-test",
+  "version": "0.0.1",
+  "description": "react-dropzone test",
+  "main": "main.js",
+  "private": true,
+  "scripts": {
+    "start": "electron-webpack dev",
+    "build": "npm-run-all --sequential build:wbpk build:builder",
+    "build:wbpk": "electron-webpack",
+    "build:builder": "electron-builder"
+  },
+  "author": "Juan Irache Duesca",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/preset-react": "^7.9.4",
+    "electron": "^8.2.3",
+    "electron-builder": "^22.5.1",
+    "electron-webpack": "^2.8.2",
+    "npm-run-all": "^4.1.5",
+    "precss": "^4.0.0",
+    "sass-loader": "^8.0.2",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11"
+  },
+  "dependencies": {
+    "electron-debug": "^3.0.1",
+    "electron-devtools-installer": "^3.0.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-dropzone": "^10.2.2"
+  },
+  "electronWebpack": {
+    "renderer": {
+      "template": "src/index.html",
+      "webpackConfig": "webpack.renderer.js"
+    }
+  }
+}
